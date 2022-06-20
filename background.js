@@ -7,5 +7,7 @@ chrome.runtime.onInstalled.addListener(() => {
     chrome.storage.sync.set({ color });
     // Print message to console
     // 'green' is printed in the color stored in 'color' variable using CSS console format specifier %c
+    // backticks are used to use template literals with string interpolation (inserting variables into strings)
+    // second parameter is passed as a string and is used to apply CSS style rules to the output string
     console.log('Default background color set to %cgreen', `color: ${color}`);
 });
